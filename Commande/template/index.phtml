@@ -1,0 +1,20 @@
+
+<main>
+    <table>
+        <tr>
+            <th>Commande</th>
+            <th>Date Commande</th>
+            <th>Date Livraison</th>
+            <th>Statut</th>
+        </tr>
+        <?php foreach ($listCde as $key => $value): ?>
+            <tr>
+                <td><a href="detail_cmde.php?numcde=<?= $value['orderNumber']; ?>"><?= $value['orderNumber']; ?></a></td>
+                <td><?= $value['orderDate']; ?></td>
+                <td><?= $value['shippedDate']; ?></td>
+                <td><?= $value['status']; ?></td>
+            </tr>
+        <?php endforeach; ?>
+        
+    </table>
+</main>
